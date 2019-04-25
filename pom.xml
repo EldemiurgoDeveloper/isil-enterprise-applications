@@ -11,6 +11,7 @@
     <modules>
         <module>isil-di</module>
         <module>isil-dis</module>
+        <module>isil-web</module>
     </modules>
 
 </project>
