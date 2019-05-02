@@ -15,17 +15,16 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
-    @GetMapping("/product")
-    public String getGreeting(Model model) {
-        model.addAttribute("name", "Jose");
-        return "product";
+    @GetMapping( {"/", "/index"})
+    public String index(){
+        return "index";
     }
 
     @GetMapping("/products")
-    public String getProductList(Model model) {
-        List<Product> products = productService.getAll();
-        model.addAttribute("products", products);
-        return "products";
+    public String getProductlist(Model model){
+        model.addAttribute("products", productService.getAll());
+        return "product";
     }
+
 
 }
