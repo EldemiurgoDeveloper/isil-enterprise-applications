@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="mercedes" class="pe.isil.model.Mercedes"/>
+    <bean name="audi" class="pe.isil.model.Audi"/>
+
+    <bean name="salesManagementAudi" class="pe.isil.business.SalesManagement">
+        <constructor-arg name="car" ref="audi"/>
+    </bean>
+
+    <bean name="salesManagementMercedes" class="pe.isil.business.SalesManagement">
+        <constructor-arg name="car" ref="mercedes"/>
+    </bean>
+
+</beans>
